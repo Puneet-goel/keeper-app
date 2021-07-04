@@ -8,7 +8,7 @@ export default makeStyles(() => ({
   },
   appBar: {
     borderRadius: 15,
-    margin: '30px 0',
+    margin: '0px 0px 30px 0px',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 50px',

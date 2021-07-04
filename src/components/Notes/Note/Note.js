@@ -4,20 +4,20 @@ import { Paper, Typography, Card, CardHeader, CardContent, CardActions, Button }
 import DeleteIcon from '@material-ui/icons/Delete';
 import { deleteNote } from "../../../controller/note";
 
-function Note({ title,content,id }){
+function Note({ note }){
 	const classes = useStyles();
 	return (
 		<Paper elevation={3} className={classes.paper}>
 			<Card> 
-			    <CardHeader title={title} />
+			    <CardHeader title={note.Title} />
 			    <CardContent>
 	                <Typography variant="body2" color="textSecondary" component="p">
-	                    {content}
+	                    {note.Content}
 	                </Typography>
 	            </CardContent>
 	            <CardActions>
-	                <Button onClick={() => deleteNote(id)} href="/">
-		                <DeleteIcon />
+	                <Button onClick={() => deleteNote(note._id)} href="/">
+		                <DeleteIcon fontSize="small" />
 	                </Button>
 	            </CardActions>
 			</Card>
