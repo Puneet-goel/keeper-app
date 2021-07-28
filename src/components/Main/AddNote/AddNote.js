@@ -1,11 +1,13 @@
 import React,{ useState, useEffect } from 'react';
-import useStyles from './styles';
+import { useDispatch } from "react-redux";
 import { Paper, Button, TextField, Card, CardContent, CardHeader } from "@material-ui/core";
 import AddIcon from '@material-ui/icons/Add';
+
+import useStyles from './styles';
 import { addNote } from "../../../actions/actions.js";
-import { useDispatch } from "react-redux";
 
 const AddNote = () => {
+	
 	const classes = useStyles();
 	const dispatch = useDispatch();
 
@@ -41,20 +43,23 @@ const AddNote = () => {
 		            <form onSubmit={handleSubmit} className={`${classes.form} ${classes.root}`} autoComplete="off">
 		                <TextField 
 		                    name="title" 
-		                    variant="outlined" 
-		                    label="Title"
+		                    variant="standard" 
+		                    placeholder="Title"
 		                    fullWidth 
 		                    value={note.title} 
 		                    onChange={handleChange}
 		                />
-					    <TextField 
+		                &nbsp;
+					    <TextField
 					        name="content" 
-					        variant="outlined"
-					        label="Message" 
+					        variant="standard"
+					        placeholder="Take a Note..." 
 					        fullWidth 
 					        value={note.content} 
 					        onChange={handleChange}
+					        multiline
 					    />
+					    &nbsp;
 					    <Button 
 					        className={classes.buttonSubmit} 
 					        variant="contained" 

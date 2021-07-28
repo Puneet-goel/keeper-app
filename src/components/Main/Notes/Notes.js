@@ -1,9 +1,11 @@
 import React from "react";
-import Note from "./Note/Note";
 import { useSelector } from "react-redux"; 
 import { Grid } from "@material-ui/core";
 
+import Note from "./Note/Note";
+
 const Notes = () => {
+    
     const notes = useSelector((state) => state);
 
   	return(

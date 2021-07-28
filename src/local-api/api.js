@@ -19,22 +19,11 @@ export const add = (note) => {
     let notes = JSON.parse(localStorage.getItem('data')) || [];
     notes.push(newNote);
     localStorage.setItem('data', JSON.stringify(notes));
+
+    return newNote;
 };
 
 export const get = () => {
     let notes = JSON.parse(localStorage.getItem('data')) || [];
     return notes;
-}
-
-export const update = (id, updatedNote) => {
-    let notes = JSON.parse(localStorage.getItem('data')) || [];
-
-    notes = notes.map((note) => {
-        if(note._id === id){
-            note = updatedNote;
-        }
-        return note;
-    });
-
-    localStorage.setItem('data', JSON.stringify(notes));
 }

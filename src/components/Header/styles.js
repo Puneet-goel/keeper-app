@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(() => ({
   root: {
     "&.MuiAppBar-colorPrimary": {
-      backgroundColor: "#FFD700",
+      backgroundColor: "#faf6e0",
     }
   },
   appBar: {

@@ -1,8 +1,9 @@
 import React,{ useEffect } from 'react';
+import { useDispatch } from "react-redux";
+
+import { getNotes } from "./actions/actions.js";
 import Header from "./components/Header/Header.js";
 import Main from "./components/Main/Main";
-import { getNotes } from "./actions/actions.js";
-import { useDispatch } from "react-redux";
 
 function App(){
 	const dispatch = useDispatch();
