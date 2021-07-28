@@ -1,13 +1,13 @@
 import React from "react";
 import Note from "./Note/Note";
+import { useSelector } from "react-redux"; 
 import { Grid } from "@material-ui/core";
-import { getData } from "../../controller/note";
 
 const Notes = () => {
+    const notes = useSelector((state) => state);
 
-    var notes = getData();
   	return(
-		<Grid container spacing={2}>
+		<Grid container spacing={2} >
 	       {
                 notes.map((note) => (
                 	<Grid key={note._id} item xs={12} sm={4}> 

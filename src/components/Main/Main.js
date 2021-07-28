@@ -1,10 +1,10 @@
 import React from "react";
-import Notes from "../Notes/Notes";
+import Notes from "./Notes/Notes";
 import { Container, Grid, Grow } from "@material-ui/core";
-import AddNote from "../AddNote/AddNote";
+import AddNote from "./AddNote/AddNote";
 import useStyles from './styles';
 
-const Home = () => {
+const Main = () => {
 	const classes = useStyles();
   	return(
 		<Grow in>
@@ -22,4 +22,4 @@ const Home = () => {
 	);
 }
 
-export default Home;
+export default Main;

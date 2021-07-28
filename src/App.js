@@ -1,20 +1,21 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import Header from "./components/Header/Header.js";
-import Home from "./components/Home/Home";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-  
+import Main from "./components/Main/Main";
+import { getNotes } from "./actions/actions.js";
+import { useDispatch } from "react-redux";
+
 function App(){
+	const dispatch = useDispatch();
+
+	useEffect(()=>{
+		dispatch(getNotes());
+	},[dispatch]);
+
 	return (
-		<BrowserRouter>
-			<div>
-			   <Header />
-			   <Switch>
-			        <Route exact path="/"> 
-			            <Home/> 
-			        </Route>
-			   </Switch>
-			</div>
-		</BrowserRouter>
+		<>
+			<Header />
+			<Main /> 
+	    </>
 	);
 }
  
