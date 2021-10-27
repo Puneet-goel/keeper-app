@@ -1,0 +1,14 @@
+.header {
+  background-color: rgb(251, 237, 156);
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.heading {
+  color: rgba(0,183,255, 1);
+  text-decoration: none;
+}
+
+.logo {
+  height: 60px;
+}

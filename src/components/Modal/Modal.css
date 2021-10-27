@@ -1,0 +1,12 @@
+.modal-id{
+    font-weight: bold;
+    font-family: 'Reenie Beanie';
+    font-size: 2rem;
+}
+
+.modal-body .title{
+    font-weight: bold;
+    font-family: 'Reenie Beanie';
+    font-size: 2rem;
+    border: none;
+}

@@ -1,4 +1,4 @@
-import { FETCH, DELETE, ADD } from "../constants/actionTypes";
+import { FETCH, DELETE, ADD, DELETEALL, UPDATE } from "../constants/actionTypes";
 
 export const noteReducer = (notes = [], action) => {
 	switch (action.type) {
@@ -6,8 +6,12 @@ export const noteReducer = (notes = [], action) => {
 		    return action.payload;  
 		case ADD:
 		    return [...notes, action.payload]; 
+		case UPDATE:
+			return action.payload; 
 		case DELETE:
-		    return notes.filter((note) => note._id!==action.payload);
+		    return action.payload; 
+		case DELETEALL:
+			return [];
 		default:
 		    return notes;
     }

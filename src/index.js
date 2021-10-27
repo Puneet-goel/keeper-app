@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux';
 import thunk from "redux-thunk";
-import logger from "redux-logger";
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'font-awesome/css/font-awesome.css';
 
 import { noteReducer } from "./reducers/notes.js";
-import App from "./App";
-import "./index.css";
+import App from "./App.jsx";
 
-const store = createStore(noteReducer, applyMiddleware(thunk,logger));
+const store = createStore(noteReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
 	<Provider store={store}>

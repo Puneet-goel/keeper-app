@@ -1,9 +1,9 @@
-import { FETCH, DELETE, ADD } from "../constants/actionTypes";
+import { FETCH, DELETE, ADD, DELETEALL, UPDATE } from "../constants/actionTypes";
 import * as api from "../local-api/api.js";
 
-export const getNotes = () => async(dispatch) => {
+export const getNotes = () => (dispatch) => {
 	try{
-		const data = await api.get();
+		const data = api.get();
 		dispatch({
 		    type: FETCH,
 		    payload: data
@@ -14,10 +14,10 @@ export const getNotes = () => async(dispatch) => {
 	}
 }
 
-export const addNote = (note) => async(dispatch) => {
+export const addNote = (note) => (dispatch) => {
 
 	try{
-		const data = await api.add(note);
+		const data = api.add(note);
 		dispatch({
 		    type: ADD,
 		    payload: data
@@ -28,15 +28,45 @@ export const addNote = (note) => async(dispatch) => {
 	}
 }
 
-export const deleteNote = (id) => async(dispatch) => {
+export const deleteNote = (id) => (dispatch) => {
 
 	try{
-		await api.del(id);
-		console.log(id);
+		const data = api.deleteOne(id);
+
 		dispatch({
 		    type: DELETE,
-		    payload: id
+		    payload: data
 	    });
+	}
+	catch(error){
+		console.log(error);
+	}
+}
+
+export const deleteAllNotes = () => (dispatch) => {
+
+	try{
+		const data = api.deleteAll();
+
+		dispatch({
+		    type: DELETEALL,
+		    payload: data
+	    });
+	}
+	catch(error){
+		console.log(error);
+	}
+}
+
+export const update = (id, note) => (dispatch) => {
+
+	try{
+		const data = api.update(id, note);
+
+		dispatch({
+			type: UPDATE,
+			payload: data
+		})
 	}
 	catch(error){
 		console.log(error);
