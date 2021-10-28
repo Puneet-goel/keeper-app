@@ -15,6 +15,6 @@ NetLify: https://notekeeper-puneet.netlify.app
 5. Clear all notes
 
 # Features
-1. Add custom background
+1. Add Custom Backgrounds
 2. Responsive User Interface
 3. Random Color for your notes
