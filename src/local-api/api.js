@@ -10,6 +10,7 @@ export const add = (note) => {
         ...note,
         _id: notes.length + 1,
         createdAt: new Date(),
+        edit: false,
         color: getRandomColor()
     };
 
@@ -34,7 +35,7 @@ export const update = (id, note) => {
                 ...a,
                 title: note.title,
                 content: note.content,
-                createdAt: new Date()
+                edit: true
             };
         }else{
             return a;

@@ -4,9 +4,16 @@
 } */
 
 .title{
-    font-weight: bold;
     font-family: 'Reenie Beanie';
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+
+.highlight{
+    font-size: 0.8rem;
+}
+
+.content{
+    font-size: 1.1rem;
 }
 
 .functions{
@@ -16,7 +23,7 @@
 
 .functions i{
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .functions i:hover{

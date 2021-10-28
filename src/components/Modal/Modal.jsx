@@ -35,7 +35,7 @@ const Modal = ({editNote}) => {
                         <input type="text" name="content" className="form-control" placeholder="Take a note..." value={note.content} onChange={handleChange} autoComplete="off" spellCheck="false" />
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-danger" data-dismiss="modal" onClick={handleClose}>Close</button>
+                        <button type="button" className="btn btn-success" data-dismiss="modal" onClick={handleClose}>Save</button>
                     </div>
                 </div>
             </div>
