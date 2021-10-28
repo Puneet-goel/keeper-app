@@ -2,7 +2,7 @@
 Manage your Daily Notes
 
 # Home Page
-![notes](https://user-images.githubusercontent.com/55274410/127743922-2662ad5a-43a2-47f0-a2fb-6a8d561265fe.JPG)
+![Note Keeper](https://user-images.githubusercontent.com/55274410/139312244-05a481e7-25e1-46b9-be71-4e82fa04329a.png)
 
 # Deployment
 NetLify: https://notekeeper-puneet.netlify.app
@@ -15,5 +15,6 @@ NetLify: https://notekeeper-puneet.netlify.app
 5. Clear all notes
 
 # Features
-1. Random Color for your notes
+1. Add custom background
 2. Responsive User Interface
+3. Random Color for your notes
