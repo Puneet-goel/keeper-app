@@ -1,5 +1,6 @@
 import React,{ useEffect, useState } from 'react';
 import { useDispatch } from "react-redux";
+import $ from "jquery";
 
 import { getNotes } from "./actions/actions.js";
 import Header from "./components/Header/Header.jsx";
@@ -16,6 +17,12 @@ function App(){
 
 	useEffect(()=>{
 		dispatch(getNotes());
+		const x = localStorage.getItem('file');
+		if(!x){
+			localStorage.setItem('file','');
+		}else{
+			$("#root").css("background-image", "url(" + x + ")");
+		}
 	},[dispatch]);
 
 	return (

@@ -1,14 +1,27 @@
 .header {
   background-color: rgb(251, 237, 156);
   border-radius: 25px;
+  justify-content: space-between;
+}
+
+.left{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+}
+
+.logo {
+  height: 60px;
+  border-radius: 40px;
 }
 
 .heading {
   color: rgba(0,183,255, 1);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  height: 60px;
+.wallpaper:hover {
+  color: red;
 }

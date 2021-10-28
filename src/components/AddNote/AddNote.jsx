@@ -38,13 +38,13 @@ const AddNote = () => {
 			<div className="addbox">
 				<input type="text" name="title" className="form-control mb-1" placeholder="Title" value={note.title} onChange={handleChange} autoComplete="off" spellCheck="false" />
 				<input type="text" name="content" className="form-control" placeholder="Take a note..." value={note.content} onChange={handleChange} autoComplete="off" spellCheck="false" />
-				<div className="d-flex justify-content-around" >
-					<button className="btn btn-success mt-3" type="submit" onClick={handleSubmit} > 
+				<div className="d-flex justify-content-around mt-3" >
+					<button className="btn btn-success" type="submit" onClick={handleSubmit} > 
 						<i className="fa fa-plus" /> &nbsp;
 						ADD
 					</button>
-					<button className="btn btn-danger mt-3 d-flex" type="submit" onClick={handleClear} > 
-						<i className="material-icons"> clear_all </i>
+					<button className="btn btn-danger d-flex" type="submit" onClick={handleClear} > 
+						<i className="material-icons"> clear_all </i> &nbsp;
 						CLEAR
 					</button>
 				</div>

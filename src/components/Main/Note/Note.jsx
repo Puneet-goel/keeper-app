@@ -15,7 +15,7 @@ const Note = ({ note, setEditNote }) => {
 	}
 
 	return (
-		<div className="card mb-4 mr-3" style={{background: note.color}}>
+		<div className="card mb-0 mt-4 mr-3" style={{background: note.color}}>
 			<div className="card-body">
 				<h5 className="card-title font-weight-bold mb-0 title">#{note._id} {note.title}</h5>
 				<p className="card-subtitle mb-2 text-muted font-weight-light font-italic text-right highlight">{moment(note.createdAt).fromNow()}</p>
@@ -25,7 +25,7 @@ const Note = ({ note, setEditNote }) => {
 				<p className="card-text content">{note.content}</p>
 				<div className="functions mt-3">
 					<i className="fa fa-edit text-success" data-toggle="modal" data-target="#edit" onClick={editNote}/>
-					<i className="material-icons text-danger"  onClick={() => dispatch(deleteNote(note._id))}> delete </i>
+					<i className="material-icons text-danger" onClick={() => dispatch(deleteNote(note._id))}> delete </i>
 				</div>
 			</div>
 		</div>

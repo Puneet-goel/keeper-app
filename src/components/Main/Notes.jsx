@@ -8,7 +8,7 @@ const Notes = ({setEditNote}) => {
     const notes = useSelector((state) => state);
 
   	return(
-		<div className="card-columns m-3">
+		<div className="card-columns mt-3 mx-3">
 			{
 				notes.map((note) => (
 					<Note note={note} key={note._id} setEditNote={setEditNote} />

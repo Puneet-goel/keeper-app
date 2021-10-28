@@ -3,10 +3,14 @@
     margin: 0;
 }
 
-body {
+#root {
     font-family: 'Lato';
-    background: #dcdad7;
     min-height: 100vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #dcdad7;
+    background-attachment: fixed;
+	background-size: cover;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

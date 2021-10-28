@@ -10,3 +10,7 @@
     font-size: 2rem;
     border: none;
 }
+
+.modal-footer{
+    border-top: none;
+}

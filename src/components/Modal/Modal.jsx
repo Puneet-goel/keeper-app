@@ -20,8 +20,7 @@ const Modal = ({editNote}) => {
 		});
 	}
 
-    const handleClose = (event) => {
-        event.preventDefault();
+    const handleClose = () => {
         dispatch(update(note._id, note));
     }
 
